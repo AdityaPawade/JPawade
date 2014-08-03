@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet(urlPatterns = { "/Blog/*" })
 public class BlogServlet extends HttpServlet {
@@ -60,7 +61,7 @@ public class BlogServlet extends HttpServlet {
 		req.setAttribute("pages", Math.ceil(count / postPerPage));
 		req.setAttribute("page", pageNo);
 
-		ArrayList<BlogPost> posts = blogService.getBlogPosts(search,
+		List<BlogPost> posts = blogService.getBlogPosts(search,
 				filterDate, filterTag, pageNo, postPerPage);
 		req.setAttribute("posts", posts);
 

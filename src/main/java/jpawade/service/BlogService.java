@@ -1,26 +1,26 @@
 package jpawade.service;
 
+import jpawade.model.BlogPost;
+import jpawade.model.Tag;
+import jpawade.modules.DBModule;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
-
-import jpawade.model.BlogPost;
-import jpawade.model.Tag;
-import jpawade.modules.DBModule;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.List;
 
 public class BlogService {
 	private static final Logger slf4jLogger = LoggerFactory
 			.getLogger(BlogService.class);
 
-	public ArrayList<BlogPost> getBlogPosts(String search, String filterDate,
+	public List<BlogPost> getBlogPosts(String search, String filterDate,
 			String filterTag, int page, double postPerPage) {
-		ArrayList<BlogPost> posts = new ArrayList<BlogPost>();
+		List<BlogPost> posts = new ArrayList<BlogPost>();
 
 		DBModule dbModule = new DBModule();
 		Connection con = dbModule.createConnection();

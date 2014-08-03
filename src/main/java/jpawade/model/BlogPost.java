@@ -1,9 +1,9 @@
 package jpawade.model;
 
-import java.util.ArrayList;
-import java.util.Date;
-
 import jpawade.modules.StaticModules;
+
+import java.util.Date;
+import java.util.List;
 
 public class BlogPost {
 	private int id;
@@ -12,8 +12,8 @@ public class BlogPost {
 	private String content;
 	private String picUrl;
 	private String desc;
-	private ArrayList<String> tags;
-	private ArrayList<Comment> comments;
+	private List<String> tags;
+	private List<Comment> comments;
 	private int commentsSize;
 	private int totalSize;
 
@@ -32,7 +32,7 @@ public class BlogPost {
 	}
 
 	public BlogPost(int id, Date date, String title, String picUrl,
-			String text, int totalSize, ArrayList<String> tags, Boolean single) {
+			String text, int totalSize, List<String> tags, Boolean single) {
 		this.id = id;
 		this.date = date;
 		this.title = title;
@@ -47,7 +47,7 @@ public class BlogPost {
 	}
 
 	public BlogPost(int id, Date date, String title, String picUrl,
-			String content, String desc, int totalSize, ArrayList<String> tags) {
+			String content, String desc, int totalSize, List<String> tags) {
 		this.id = id;
 		this.date = date;
 		this.title = title;
@@ -59,7 +59,7 @@ public class BlogPost {
 	}
 
 	public BlogPost(int id, Date date, String title, String content,
-			String picUrl, String desc, ArrayList<String> tags) {
+			String picUrl, String desc, List<String> tags) {
 		this.id = id;
 		this.date = date;
 		this.title = title;
@@ -76,11 +76,11 @@ public class BlogPost {
 		this.totalSize = totalSize;
 	}
 
-	public ArrayList<String> getTags() {
+	public List<String> getTags() {
 		return tags;
 	}
 
-	public void setTags(ArrayList<String> tags) {
+	public void setTags(List<String> tags) {
 		this.tags = tags;
 	}
 
@@ -135,11 +135,11 @@ public class BlogPost {
 	public BlogPost() {
 	}
 
-	public ArrayList<Comment> getComments() {
+	public List<Comment> getComments() {
 		return comments;
 	}
 
-	public void setComments(ArrayList<Comment> comments) {
+	public void setComments(List<Comment> comments) {
 		this.comments = comments;
 	}
 

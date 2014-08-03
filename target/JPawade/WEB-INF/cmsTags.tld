@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN" "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>1.1</jsp-version>
+	<short-name>JPTcms</short-name>
+	<uri>/WEB-INF/JPTcms</uri>
+	<description>tags for cms</description>
+	<tag>
+		<name>posts</name>
+		<tag-class>cms.tag.BlogTag</tag-class>
+		<body-content>JSP</body-content>
+		<description>Display Posts</description>
+	</tag>
+	<tag>
+		<name>post</name>
+		<tag-class>cms.tag.PostTag</tag-class>
+		<body-content>JSP</body-content>
+		<description>Display Single Post</description>
+		<attribute>
+			<name>details</name>
+			<required>true</required>
+		</attribute>
+	</tag>
+	<tag>
+		<name>comment</name>
+		<tag-class>cms.tag.CommentTag</tag-class>
+		<body-content>JSP</body-content>
+		<description>Display Comments</description>
+	</tag>
+	<tag>
+		<name>header</name>
+		<tag-class>cms.tag.HeaderTag</tag-class>
+		<description>Display Header</description>
+		<attribute>
+			<name>path</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>sideTags</name>
+		<tag-class>cms.tag.SideTagsTag</tag-class>
+		<body-content>JSP</body-content>
+		<description>Display Tags</description>
+	</tag>
+	<tag>
+		<name>sidePopular</name>
+		<tag-class>cms.tag.SidePopularTag</tag-class>
+		<body-content>JSP</body-content>
+		<description>Display Popular Posts</description>
+	</tag>
+	<tag>
+		<name>sideArchive</name>
+		<tag-class>cms.tag.SideArchiveTag</tag-class>
+		<body-content>JSP</body-content>
+		<description>Display Archives</description>
+	</tag>
+	<tag>
+		<name>portfolioService</name>
+		<tag-class>cms.tag.PortfolioServiceTag</tag-class>
+		<body-content>JSP</body-content>
+		<description>Display Services</description>
+	</tag>
+	<tag>
+		<name>portfolioProject</name>
+		<tag-class>cms.tag.PortfolioProjectTag</tag-class>
+		<body-content>JSP</body-content>
+		<description>Display Projects</description>
+	</tag>
+	<tag>
+		<name>project</name>
+		<tag-class>cms.tag.ProjectTag</tag-class>
+		<body-content>JSP</body-content>
+		<description>Display Project</description>
+	</tag>
+	<tag>
+		<name>pager</name>
+		<tag-class>cms.tag.BlogPagerTag</tag-class>
+		<body-content>JSP</body-content>
+		<description>Display Pager</description>
+	</tag>
+	<tag>
+		<name>news</name>
+		<tag-class>cms.tag.NewsTag</tag-class>
+		<body-content>JSP</body-content>
+		<description>Display News</description>
+	</tag>
+	<tag>
+		<name>contact</name>
+		<tag-class>cms.tag.ContactTag</tag-class>
+		<body-content>JSP</body-content>
+		<description>Display Contacts</description>
+	</tag>
+	<tag>
+		<name>hosted</name>
+		<tag-class>cms.tag.HostedTag</tag-class>
+		<body-content>JSP</body-content>
+		<description>Display Hosted Projects</description>
+	</tag>
+	<tag>
+		<name>allHosted</name>
+		<tag-class>cms.tag.HostedAllTag</tag-class>
+		<body-content>JSP</body-content>
+		<description>Display All Hosted Projects</description>
+	</tag>
+</taglib>

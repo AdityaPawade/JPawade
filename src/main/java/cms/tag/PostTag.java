@@ -1,14 +1,13 @@
 package cms.tag;
 
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+import jpawade.model.BlogPost;
 
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.BodyTagSupport;
-
-import jpawade.model.BlogPost;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.List;
 
 public class PostTag extends BodyTagSupport {
 	private static final long serialVersionUID = 1L;
@@ -49,7 +48,7 @@ public class PostTag extends BodyTagSupport {
 							"<img src='' alt='' id='imgPreview' />");
 				}
 				String tags = "";
-				ArrayList<String> tagList = post.getTags();
+				List<String> tagList = post.getTags();
 				for (String tag : tagList) {
 					if (!tags.equals(""))
 						tags = tags.concat(",");

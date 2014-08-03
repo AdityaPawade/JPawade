@@ -1,21 +1,20 @@
 package jpawade.tag;
 
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+import jpawade.model.BlogPost;
+import jpawade.model.Comment;
 
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.BodyTagSupport;
-
-import jpawade.model.BlogPost;
-import jpawade.model.Comment;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.List;
 
 public class CommentTag extends BodyTagSupport {
 	// private static final Logger slf4jLogger =
 	// LoggerFactory.getLogger(CommentTag.class);
 	private static final long serialVersionUID = 1L;
-	ArrayList<Comment> comments;
+	List<Comment> comments;
 	SimpleDateFormat format;
 	int size = 0;
 	String template = "";
